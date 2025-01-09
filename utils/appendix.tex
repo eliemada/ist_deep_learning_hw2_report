@@ -1,1 +1,64 @@
 \section{Appendix: Graphs and Visualizations}
+
+% Training Loss Comparison
+\begin{figure}[htbp!]
+    \centering
+    \begin{subfigure}{0.32\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{images/CNN-3-train-loss-lr_0.1.png}
+    \caption{LR = $0.1$}
+    \end{subfigure}
+    \begin{subfigure}{0.32\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{images/CNN-3-train-loss-lr_0.01.png}
+    \caption{LR = $0.01$}
+    \end{subfigure}
+    \begin{subfigure}{0.32\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{images/CNN-3-train-loss-lr_0.001.png}
+    \caption{LR = $0.001$}
+    \end{subfigure}
+    \caption{Training Loss for different Learning Rates without Batch Normalization}
+    \label{fig:training_loss_comparison}
+    \end{figure}
+    % Validation Accuracy Comparison
+    \begin{figure}[htbp!]
+    \centering
+    \begin{subfigure}{0.32\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{images/CNN-3-valid-accuracy-lr_0.1.png}
+    \caption{LR = $0.1$}
+    \end{subfigure}
+    \begin{subfigure}{0.32\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{images/CNN-3-valid-accuracy-lr_0.01.png}
+    \caption{LR = $0.01$}
+    \end{subfigure}
+    \begin{subfigure}{0.32\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{images/CNN-3-valid-accuracy-lr_0.001.png}
+    \caption{LR = $0.001$}
+    \end{subfigure}
+    \caption{Validation Accuracy for different Learning Rates without Batch Normalization}
+    \label{fig:validation_acc_comparison}
+    \end{figure}
+
+
+
+
+    % With Batch Normalization
+\begin{figure}[htbp!]
+    \centering
+    \begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{images/CNN-3-train-loss-with-batchnorm.png}
+    \caption{Training Loss}
+    \end{subfigure}
+    \begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{images/CNN-3-valid-accuracy-with-batchnorm.png}
+    \caption{Validation Accuracy}
+    \end{subfigure}
+    \caption{Training Metrics with Batch Normalization (LR = 0.01)}
+    \label{fig:metrics_with_batchnorm}
+    \end{figure}
