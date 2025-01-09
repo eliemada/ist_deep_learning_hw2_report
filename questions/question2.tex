@@ -70,7 +70,7 @@ Replacing the flattening operation with global average pooling:
     \item Made the model more robust to spatial translations
 \end{itemize}
 
-\subsection{2.3 Analysis of Parameter Count Differences}
+\subsection{Analysis of Parameter Count Differences}
 
 We implemented the \texttt{get\_number\_trainable\_params} function to analyze the number of trainable parameters in both networks. The significant difference in parameter count (5,340,742 vs 756,742) can be attributed to several key factors:
 
@@ -92,7 +92,7 @@ We implemented the \texttt{get\_number\_trainable\_params} function to analyze t
 
 The improved performance with fewer parameters demonstrates that the original architecture was overparameterized, and the modifications helped create a more efficient and effective model.
 
-\subsection{2.4 Kernel Size and Pooling Effects}
+\subsection{Kernel Size and Pooling Effects}
 
 The choice of small kernels (3x3) instead of larger kernels (width × height) and the use of pooling layers are fundamental design decisions in modern CNNs:
 
