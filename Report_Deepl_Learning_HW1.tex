@@ -1,0 +1,37 @@
+\documentclass[9pt]{extarticle}
+\usepackage{utils/MyStyleSheet}
+
+
+
+
+\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
+
+\title{Deep Learning}
+\author{Elie BRUNO \\ Maira GAUGES}
+\pagestyle{fancy}
+\lhead{Elie BRUNO \\
+Maira GAUGES}
+\rhead{Report - Deep Learning}
+\cfoot{\thepage\ of \pageref{LastPage}}
+
+
+%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\include{utils/Title.tex}
+\tableofcontents
+\newpage
+%\include{Report-MS-I.tex}
+\twocolumn
+\input{questions/question1.tex}
+\input{questions/question2.tex}
+\input{questions/question3.tex}
+\input{questions/explenation}
+\onecolumn
+%% switch to one column 
+\include{utils/appendix.tex}
+
+
+
+
+
+\end{document}

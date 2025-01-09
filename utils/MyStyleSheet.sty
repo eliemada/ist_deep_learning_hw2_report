@@ -1,0 +1,176 @@
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern} % Latin Modern fonts for text
+\usepackage{unicode-math} % For modern math fonts
+\usepackage[a4paper,
+            left=0.875in,
+            right=0.875in,
+            top=1in,
+            bottom=1in]{geometry}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath,amsthm,amsfonts, lipsum,mathtools,nicematrix}
+\usepackage{fancyhdr}
+\usepackage{cancel}
+\usepackage{booktabs}
+\usepackage{fancyvrb}
+\usepackage{hyperref}
+\usepackage[nameinlink]{cleveref} % nameinlink option makes the entire thing (name+number) clickable
+
+\usepackage{lastpage}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{nicematrix}
+\usepackage{etoolbox}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{svg}
+\usepackage{float}
+\usepackage[most]{tcolorbox}
+\usepackage[Glenn]{fncychap}
+\usepackage{enumitem}
+\usepackage{karnaugh-map}
+\usepackage{svg}
+% \usepackage{subfig}
+\usepackage{tabularx} % Include in your preamble
+\usepackage{subcaption} % Include this in your preamble
+
+% \setmathfont{Latin Modern Math}
+
+
+% \newcommand{\imagehere}[2][1]{\begin{center}\includegraphics[width=#1\textwidth]{#2}\end{center}}
+\newcommand{\imagehere}[4][1]{
+  \begin{figure}[H]
+  \centering
+  \includegraphics[width=#1\textwidth]{#2}
+  \caption{#3}
+  \label{#4}
+  \end{figure}
+}
+
+\newcommand{\svghere}[2][1]{\begin{center}\includesvg[width=#1\textwidth]{#2}\end{center}}
+
+\newcommand{\summ}[2]{\overset{{#2}}{\underset{{#1}}{\sum}}}
+
+\newcommand{\norm}[1]{\| {#1} \|}
+\newcommand{\deff}{\overset{\text{def}}{=}}
+\newcommand{\limm}[1]{\underset{#1}{\lim}}
+
+
+%'#A1C9F4', BLEU
+% '#FFB482', PECHE
+ %'#8DE5A1', Vert
+ %'#FF9F9B', Rose peche
+ %'#D0BBFF', violet
+
+ %'#FAB0E4', Rose
+ %'#CFCFCF', Gris
+ %'#FFFEA3', Jaune
+ %'#B9F2F0'] Bleu clair
+
+% DEFINING COLORS : 
+\definecolor{rosej}{HTML}{FF9F9B}
+\definecolor{peche}{HTML}{FFB482}
+\definecolor{bleuj}{HTML}{A1C9F4}
+\definecolor{vertj}{HTML}{8DE5A1}
+\definecolor{bleud}{HTML}{B9F2F0}
+\definecolor{grisd}{HTML}{CFCFCF}
+\definecolor{violetd}{HTML}{D0BBFF}
+
+
+%\definecolor{paleYellow}{HTML}{FFF8DC}
+
+\makeatletter
+\newcommand*\bigcdot{\mathpalette\bigcdot@{.5}}
+\newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+\makeatother
+
+
+
+\newtcbtheorem[number within=section]{remark}{Remarque}%
+{colback=rosej!60!white,colframe=rosej,fonttitle=\bfseries}{remark}
+
+\newtcbtheorem[number within=section]{theorem}{Théorème}%
+{colback=peche!60!white,colframe=peche,fonttitle=\bfseries}{theorem}
+
+\newtcbtheorem[number within=section]{corollaire}{Corollaire}%
+{colback=grisd!60!white,colframe=grisd,fonttitle=\bfseries}{corollaire}
+
+\newtcbtheorem[number within=section]{proposition}{Proposition}%
+{colback=violetd!60!white,colframe=violetd,fonttitle=\bfseries}{Proposition}
+
+
+
+\newtcbtheorem[number within=section]{definition}{Définition}%
+{    colback=bleuj!35!white,
+    colframe=bleuj!70!black,fonttitle=\bfseries}{defi}
+
+
+\newtcbtheorem[number within=section]{exemple}{Exemple}%
+{    colback=vertj!35!white,
+    colframe=vertj!70!black,fonttitle=\bfseries
+    ,breakable}{ex}
+
+
+%%%%%%%% Proof Description %%%%%%%%%%
+\AtEndEnvironment{proof-heart}{\null\hfill\textcolor{red}{$\blacksquare$}}
+\AtEndEnvironment{proofs}{\null\hfill\color{blue}{$\blacksquare$}}%
+\newtcolorbox{proofs}{
+  fonttitle=\bfseries,
+  enhanced,
+  borderline west={4pt}{0pt}{blue},
+  colback=blue!5,
+  colframe=blue!30,
+  coltitle=blue,
+  sharp corners,
+  breakable,
+  title=Démonstration : }
+
+  \newtcolorbox{proof-heart}{
+  fonttitle=\bfseries,
+  enhanced,
+  borderline west={4pt}{0pt}{red},
+  colback=red!5,
+  colframe=red!30,
+  coltitle=red,
+  sharp corners,
+  title=Démonstration à connaître pour l'examen: }
+
+
+
+
+\newtcolorbox{important}[1][]{colback=red!20, 
+ colframe=white,
+ width=\textwidth,
+ sharpish corners,
+ top=3pt, % default value 2mm
+ bottom=3pt
+}
+  %%%%%%%%%%%%% L'alphabet
+
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\F}{\mathbb{F}}
+\renewcommand{\H}{\mathbb{H}}
+\newcommand{\J}{\mathbb{J}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\G}{\mathbb{G}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\f}[1]{f^{(#1)}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\x}{\Bar{x}}
+\newcommand{\y}{\Bar{y}}
+
+
+
+%%% LEs shorcuts
+
+\newcommand{\Limm}[1]{\underset{#1}{\lim}}
+\newcommand{\bee}{\begin{enumerate}}
+\newcommand{\eee}{\end{enumerate}}
+\newcommand{\be}{\begin{equation*}}
+\newcommand{\ee}{\end{equation*}}
+\newcommand{\abs}[1]{\mid {#1} \mid}
+
+\newcommand{\svgherenolatex}[2][1]{\begin{center}\includesvg[inkscapelatex=false, width=#1\textwidth]{#2}\end{center}}
+
